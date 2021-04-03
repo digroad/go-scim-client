@@ -11,8 +11,35 @@ package scim
 
 type UserPatch struct {
 
+	////////////////////////////////////
+	// for v2
+	////////////////////////////////////
 	// patch operations list
-	Operations []PatchOperation `json:"Operations"`
+	Operations []PatchOperation `json:"Operations,omitempty"`
+
+	////////////////////////////////////
+	// for v1
+	////////////////////////////////////
+	// user status
+	Active *bool `json:"active,omitempty"`
+
+	Addresses []Address `json:"addresses,omitempty"`
+
+	Emails []Email `json:"emails,omitempty"`
+
+	// unique resource id defined by RingCentral
+	Id string `json:"id,omitempty"`
+
+	Name *Name `json:"name,omitempty"`
+
+	PhoneNumbers []PhoneNumber `json:"phoneNumbers,omitempty"`
+
+	Photos []Photo `json:"photos,omitempty"`
+
+	Urnietfparamsscimschemasextensionenterprise20User *EnterpriseUser `json:"urn:ietf:params:scim:schemas:extension:enterprise:2.0:User,omitempty"`
+
+	// MUST be same as work type email address
+	UserName string `json:"userName,omitempty"`
 
 	Schemas []string `json:"schemas"`
 }
