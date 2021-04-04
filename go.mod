@@ -1,4 +1,4 @@
-module github.com/grokify/go-scim-client
+module github.com/digroad/go-scim-client
 
 go 1.15
 
