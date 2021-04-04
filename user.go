@@ -12,7 +12,7 @@ package scim
 type User struct {
 
 	// user status
-	Active bool `json:"active,omitempty"`
+	Active bool `json:"active"`
 
 	Addresses []Address `json:"addresses,omitempty"`
 
